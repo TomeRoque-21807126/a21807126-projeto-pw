@@ -1,0 +1,22 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+<div class="banda">
+    <h2>{{ banda.nome }}</h2>
+    <img src="{{ banda.foto }}" alt="Banda Photo">
+    <p>{{ banda.descricao }}</p>
+    <p>Country: {{ banda.pais_origem }}</p>
+    <p>Genre: {{ banda.genero }}</p>
+    <p>Formed on: {{ banda.data_formacao }}</p>
+    <a href="{% url 'bandas:editar_form' item_id=banda.id item_type='banda' %}">Editar Banda</a>
+</div>
+
+<div class="albuns">
+    <h2>Albuns</h2>
+    <ul>
+        {% for album in banda.albuns.all %}
+            <li><a href="{% url 'bandas:album' album.id %}">{{ album.titulo }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

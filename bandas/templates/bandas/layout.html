@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bandas</title>
+        <link rel="stylesheet" href="{% static 'css/bandas_template.css' %}">
+        <script>
+            function redirectToCreate(itemType) {
+                const url = "{% url 'bandas:criar_form' 'PLACEHOLDER' %}".replace('PLACEHOLDER', itemType);
+                window.location.href = url;
+            }
+        </script>
+        <script src="https://kit.fontawesome.com/c9c2f7e379.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <header id="header-main" class="header">
+            <div class="header-content">
+                <h1 class="title">Bandas</h1>
+                <nav class="navigation" id="main-nav">
+                    <ul>
+                        <li><a href="{% url 'bandas:home' %}" class="nav-link">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Criar</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" onclick="redirectToCreate('banda')"><i class="fa-solid fa-guitar"></i> Banda</a></li>
+                                <li><a href="#" onclick="redirectToCreate('album')"><i class="fa-solid fa-compact-disc"></i> Album</a></li>
+                                <li><a href="#" onclick="redirectToCreate('musica')"><i class="fa-solid fa-music"></i> Musica</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'bandas:html5css' %}" class="nav-link">HTML5-CSS</a></li>
+                        <li><a href="{% url 'digitalportfolio:home' %}" class="nav-link">Voltar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

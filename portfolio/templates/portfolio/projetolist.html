@@ -1,0 +1,24 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block content %}
+    <h3>Unidades Curriculares lecionadas em Engenharia Informática<br><br></h3>
+    <a href="{% url 'portfolio:criar_projeto' %}" class="button">Criar um Projeto</a>
+    <div id="content-container">
+        <ul class="disc-list">
+            {% for projeto in proj %}
+            <li class="disc-card">
+                <div class="disc-header">
+                    {% if projeto.nome %}
+                    <a href="{% url 'portfolio:projeto' projeto.nome %}">{{ projeto.nome }}</a>
+                    {% endif %}
+                </div>
+                <div class="disc-body">
+                    <p><strong>Tecnologias:</strong> {{ projeto.tecnologias }}</p>
+                    <p><strong>Linguagens Utilizadas:</strong> {{ projeto.linguagemProgramacao }}</p>
+                    <p><strong>Conceitos:</strong> {{ projeto.conceitos }}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

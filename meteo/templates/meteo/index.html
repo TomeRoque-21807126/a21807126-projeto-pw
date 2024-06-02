@@ -1,0 +1,22 @@
+{% extends 'meteo/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <h2>Bem vindo à aplicação Meteo<br></h2>
+
+    <h1>Metereologia em Lisboa a tempo real</h1>
+
+    <div class="content-wrapper">
+    <div>
+        <p><strong>Data:</strong> {{ forecast_date }}</p>
+        <p><strong>Temperatura Mínima:</strong> {{ min_temp }}°C</p>
+        <p><strong>Temperatura Máxima:</strong> {{ max_temp }}°C</p>
+        <p><strong>Descrição do Tempo:</strong> {{ weather_description }}</p>
+    </div>
+
+    <img class="weather-icon" src="{% static icon_path %}" alt="Ícone do tempo">
+</div>
+
+
+
+{% endblock %}

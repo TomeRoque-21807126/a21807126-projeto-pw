@@ -1,0 +1,24 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block content %}
+    <h3>Unidades Curriculares lecionadas em Engenharia Informática<br><br></h3>
+    <a href="{% url 'portfolio:criar_disciplina' %}" class="button">Criar uma Disciplina</a>
+    <div id="content-container">
+        <ul class="disc-list">
+            {% for disc in discs %}
+            <li class="disc-card">
+                <div class="disc-header">
+                    {% if disc.curricularIUnitReadableCode %}
+                    <a href="{% url 'portfolio:disciplina' disc.curricularIUnitReadableCode %}">{{ disc.curricularUnitName }}</a>
+                    {% endif %}
+                </div>
+                <div class="disc-body">
+                    <p><strong>Ano:</strong> {{ disc.curricularYear }}</p>
+                    <p><strong>Semestre:</strong> {{ disc.semester }}</p>
+                    <p><strong>ECTS:</strong> {{ disc.ects }}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

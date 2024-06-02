@@ -1,0 +1,23 @@
+{% extends 'festivais/layout.html' %}
+
+{% block content %}
+    <h3>{{fest.nome}}<br><br></h3>
+
+    <p>Bandas:<br></p>
+    <ul>
+    {% for band in fest.bandas.all %}
+        <li>
+            <p>{{band.nome}}</p>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <img src="{{ fest.image.url }}" alt="">
+
+    <p><br></p>
+
+    <a href="{% url 'festivais:festivais' %}">Voltar</a>
+
+
+
+{% endblock %}

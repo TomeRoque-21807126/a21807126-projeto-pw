@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores e Combinadores CSS</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapers.com/blog/wp-content/uploads/2023/06/Web-development-concept-with-person-using-a-laptop-computer.jpeg');
+            background-size: cover;
+            color: #333;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .material-icons {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Seletores CSS</h3>
+        <p>Os seletores CSS são utilizados para selecionar os elementos HTML que você deseja estilizar. Aqui estão alguns dos principais tipos de seletores CSS:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Seletor</th>
+                    <th>Utilizado</th>
+                    <th>Comentário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Elemento (tag)</td>
+                    <td><span class="material-icons">check_circle</span></td>
+                    <td>Seleciona todos os elementos de um tipo específico, por exemplo, <code>p</code> para parágrafos. Utilizado em <a href="{% url 'bandas:home' %}">Página 1</a>.</td>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td><span class="material-icons">check_circle</span></td>
+                    <td>Seleciona um elemento único com um ID específico. Utilizado em <a href="{% url 'bandas:home' %}">Home</a>.</td>
+                </tr>
+                <tr>
+                    <td>Classe</td>
+                    <td><span class="material-icons">check_circle</span></td>
+                    <td>Seleciona todos os elementos com uma classe específica. Utilizado em <a href="{% url 'bandas:home' %}">Página 3</a>.</td>
+                </tr>
+                <tr>
+                    <td>Atributo</td>
+                    <td><span class="material-icons">check_circle</span></td>
+                    <td>Seleciona elementos baseados em um atributo ou valor de atributo. Utilizado em <a href="{% url 'bandas:home' %}">Página 4</a>.</td>
+                </tr>
+                <tr>
+                    <td>Pseudo-classe</td>
+                    <td><span class="material-icons">check_circle</span></td>
+                    <td>Seleciona elementos em um estado específico, como <code>:hover</code>. Utilizado em <a href="{% url 'bandas:home' %}">Página 5</a>.</td>
+                </tr>
+                <tr>
+                    <td>Pseudo-elemento</td>
+                    <td><span class="material-icons">check_circle</span></td>
+                    <td>Seleciona uma parte específica de um elemento, como <code>::before</code>. Utilizado em <a href="{% url 'bandas:home' %}">Página 6</a>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Combinadores de seletores</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Combinador</th>
+                    <th>Utilizado</th>
+                    <th>Comentário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Descendente (espaço)</td>
+                    <td><span class="material-icons">check_circle</span></td>
+                    <td>Seleciona elementos que são descendentes de outro elemento. Utilizado em <a href="https://a21807126.pythonanywhere.com/bandas/banda/4/">Página 7</a>.</td>
+                </tr>
+                <tr>
+                    <td>Filho (&gt;)</td>
+                    <td><span class="material-icons">check_circle</span></td>
+                    <td>Seleciona elementos que são filhos diretos de outro elemento. Utilizado em <a href="https://a21807126.pythonanywhere.com/bandas/album/3/">Página 8</a>.</td>
+                </tr>
+                <tr>
+                    <td>Adjacente (+)</td>
+                    <td><span class="material-icons">check_circle</span></td>
+                    <td>Seleciona elementos que são imediatamente adjacentes a outro elemento. Utilizado em <a href="https://a21807126.pythonanywhere.com/bandas/musica/12/">Página 9</a>.</td>
+                </tr>
+                <tr>
+                    <td>Irmão geral (~)</td>
+                    <td><span class="material-icons">check_circle</span></td>
+                    <td>Seleciona todos os elementos que são irmãos de um elemento anterior. Utilizado em <a href="https://a21807126.pythonanywhere.com/bandas/album/9/">Página 10</a>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

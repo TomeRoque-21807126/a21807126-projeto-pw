@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso</title>
+        <link rel="stylesheet" href="{% static 'css/portfolio_template.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Engenharia Informática</h1>
+
+            <nav>
+                <a href="{% url 'portfolio:home' %}"><button>Curso</button></a>
+                <a href="{% url 'portfolio:disciplinalist' %}"><button>Disciplinas</button></a>
+                <a href="{% url 'portfolio:projetolist' %}"><button>Projetos</button></a>
+                <a href="{% url 'digitalportfolio:home' %}"><button>Voltar</button></a>
+            </nav>
+        </header>
+
+        <main>
+
+            <div id="content-container">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Universidade Lusófona</p>
+        </footer>
+    </body>
+</html>

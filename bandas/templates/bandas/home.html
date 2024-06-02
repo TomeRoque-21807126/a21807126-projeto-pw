@@ -1,0 +1,32 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+<div class="bandas">
+    <h2>Bandas</h2>
+    <ul>
+        {% for banda in bandas %}
+        <li><a href="{% url 'bandas:banda' banda.id %}">{{ banda.nome }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="albuns">
+    <h2>Albuns</h2>
+    <ul>
+        {% for album in albuns %}
+        <li><a href="{% url 'bandas:album' album.id %}">{{ album.titulo }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="musicas">
+    <h2>Músicas</h2>
+    <ul>
+        {% for album in albuns %}
+            {% for musica in album.musicas.all %}
+            <li><a href="{% url 'bandas:musica' musica.id %}">{{ musica.titulo }} - {{ album.titulo }}</a></li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

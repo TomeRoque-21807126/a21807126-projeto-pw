@@ -1,0 +1,12 @@
+{% extends 'artigos/template.html' %}
+
+{% block content %}
+<div class="posts">
+    <h2>Posts</h2>
+    <ul>
+        {% for post in posts %}
+        <li><a href="{% url 'artigos:post' post.id %}">{{ post.title }}</a> by {{ post.author.user.username }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

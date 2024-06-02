@@ -1,0 +1,462 @@
+[
+  {
+    "model": "bandas.Banda",
+    "pk": 1,
+    "fields": {
+      "nome": "The Rolling Stones",
+      "foto": "bandas/fotos/rolling_stones.jpg",
+      "descricao": "Uma banda de rock inglesa formada em 1962.",
+      "pais_origem": "Reino Unido",
+      "genero": "Rock",
+      "data_formacao": "1962-07-12"
+    }
+  },
+  {
+    "model": "bandas.Banda",
+    "pk": 2,
+    "fields": {
+      "nome": "The Beatles",
+      "foto": "bandas/fotos/beatles.jpg",
+      "descricao": "Uma banda de rock inglesa formada em Liverpool em 1960.",
+      "pais_origem": "Reino Unido",
+      "genero": "Rock",
+      "data_formacao": "1960-07-06"
+    }
+  },
+  {
+    "model": "bandas.Banda",
+    "pk": 3,
+    "fields": {
+      "nome": "Led Zeppelin",
+      "foto": "bandas/fotos/led_zeppelin.jpg",
+      "descricao": "Uma banda de rock inglesa formada em 1968.",
+      "pais_origem": "Reino Unido",
+      "genero": "Rock",
+      "data_formacao": "1968-09-07"
+    }
+  },
+  {
+    "model": "bandas.Banda",
+    "pk": 4,
+    "fields": {
+      "nome": "Pink Floyd",
+      "foto": "bandas/fotos/pink_floyd.jpg",
+      "descricao": "Uma banda de rock inglesa formada em 1965.",
+      "pais_origem": "Reino Unido",
+      "genero": "Rock Progressivo",
+      "data_formacao": "1965-03-01"
+    }
+  },
+  {
+    "model": "bandas.Banda",
+    "pk": 5,
+    "fields": {
+      "nome": "Queen",
+      "foto": "bandas/fotos/queen.jpg",
+      "descricao": "Uma banda de rock britânica formada em 1970.",
+      "pais_origem": "Reino Unido",
+      "genero": "Rock",
+      "data_formacao": "1970-06-27"
+    }
+  },
+  {
+    "model": "bandas.Banda",
+    "pk": 6,
+    "fields": {
+      "nome": "Nirvana",
+      "foto": "bandas/fotos/nirvana.jpg",
+      "descricao": "Uma banda de rock americana formada em 1987.",
+      "pais_origem": "Estados Unidos",
+      "genero": "Grunge",
+      "data_formacao": "1987-12-05"
+    }
+  },
+  {
+    "model": "bandas.Banda",
+    "pk": 7,
+    "fields": {
+      "nome": "Metallica",
+      "foto": "bandas/fotos/metallica.jpg",
+      "descricao": "Uma banda de heavy metal americana formada em 1981.",
+      "pais_origem": "Estados Unidos",
+      "genero": "Heavy Metal",
+      "data_formacao": "1981-10-28"
+    }
+  },
+  {
+    "model": "bandas.Banda",
+    "pk": 8,
+    "fields": {
+      "nome": "AC/DC",
+      "foto": "bandas/fotos/acdc.jpg",
+      "descricao": "Uma banda de rock australiana formada em 1973.",
+      "pais_origem": "Austrália",
+      "genero": "Rock",
+      "data_formacao": "1973-11-01"
+    }
+  },
+  {
+    "model": "bandas.Banda",
+    "pk": 9,
+    "fields": {
+      "nome": "The Who",
+      "foto": "bandas/fotos/the_who.jpg",
+      "descricao": "Uma banda de rock inglesa formada em 1964.",
+      "pais_origem": "Reino Unido",
+      "genero": "Rock",
+      "data_formacao": "1964-05-20"
+    }
+  },
+  {
+    "model": "bandas.Banda",
+    "pk": 10,
+    "fields": {
+      "nome": "U2",
+      "foto": "bandas/fotos/u2.jpg",
+      "descricao": "Uma banda de rock irlandesa formada em 1976.",
+      "pais_origem": "Irlanda",
+      "genero": "Rock",
+      "data_formacao": "1976-09-25"
+    }
+  },
+  {
+    "model": "bandas.Album",
+    "pk": 1,
+    "fields": {
+      "banda": 1,
+      "titulo": "Sticky Fingers",
+      "capa": "albuns/capas/sticky_fingers.jpg",
+      "data_lancamento": "1971-04-23",
+      "genero": "Rock",
+      "descricao": "Sticky Fingers é o nono álbum de estúdio da banda britânica de rock The Rolling Stones."
+    }
+  },
+  {
+    "model": "bandas.Album",
+    "pk": 2,
+    "fields": {
+      "banda": 2,
+      "titulo": "Abbey Road",
+      "capa": "albuns/capas/abbey_road.jpg",
+      "data_lancamento": "1969-09-26",
+      "genero": "Rock",
+      "descricao": "Abbey Road é o décimo primeiro álbum de estúdio dos Beatles."
+    }
+  },
+  {
+    "model": "bandas.Album",
+    "pk": 3,
+    "fields": {
+      "banda": 3,
+      "titulo": "Led Zeppelin IV",
+      "capa": "albuns/capas/led_zeppelin_iv.jpg",
+      "data_lancamento": "1971-11-08",
+      "genero": "Rock",
+      "descricao": "Led Zeppelin IV é o quarto álbum de estúdio da banda britânica de rock Led Zeppelin."
+    }
+  },
+  {
+    "model": "bandas.Album",
+    "pk": 4,
+    "fields": {
+      "banda": 4,
+      "titulo": "The Dark Side of the Moon",
+      "capa": "albuns/capas/dark_side_of_the_moon.jpg",
+      "data_lancamento": "1973-03-01",
+      "genero": "Rock Progressivo",
+      "descricao": "The Dark Side of the Moon é o oitavo álbum de estúdio da banda britânica de rock progressivo Pink Floyd."
+    }
+  },
+  {
+    "model": "bandas.Album",
+    "pk": 5,
+    "fields": {
+      "banda": 5,
+      "titulo": "A Night at the Opera",
+      "capa": "albuns/capas/a_night_at_the_opera.jpg",
+      "data_lancamento": "1975-11-21",
+      "genero": "Rock",
+      "descricao": "A Night at the Opera é o quarto álbum de estúdio da banda britânica Queen."
+    }
+  },
+  {
+    "model": "bandas.Album",
+    "pk": 6,
+    "fields": {
+      "banda": 6,
+      "titulo": "Nevermind",
+      "capa": "albuns/capas/nevermind.jpg",
+      "data_lancamento": "1991-09-24",
+      "genero": "Grunge",
+      "descricao": "Nevermind é o segundo álbum de estúdio da banda grunge americana Nirvana."
+    }
+  },
+  {
+    "model": "bandas.Album",
+    "pk": 7,
+    "fields": {
+      "banda": 7,
+      "titulo": "Master of Puppets",
+      "capa": "albuns/capas/master_of_puppets.jpg",
+      "data_lancamento": "1986-03-03",
+      "genero": "Heavy Metal",
+      "descricao": "Master of Puppets é o terceiro álbum de estúdio da banda de heavy metal Metallica."
+    }
+  },
+  {
+    "model": "bandas.Album",
+    "pk": 8,
+    "fields": {
+      "banda": 8,
+      "titulo": "Back in Black",
+      "capa": "albuns/capas/back_in_black.jpg",
+      "data_lancamento": "1980-07-25",
+      "genero": "Rock",
+      "descricao": "Back in Black é o sétimo álbum de estúdio da banda de rock australiana AC/DC."
+    }
+  },
+  {
+    "model": "bandas.Album",
+    "pk": 9,
+    "fields": {
+      "banda": 9,
+      "titulo": "Who's Next",
+      "capa": "albuns/capas/whos_next.jpg",
+      "data_lancamento": "1971-08-14",
+      "genero": "Rock",
+      "descricao": "Who's Next é o quinto álbum de estúdio da banda britânica The Who."
+    }
+  },
+  {
+    "model": "bandas.Album",
+    "pk": 10,
+    "fields": {
+      "banda": 10,
+      "titulo": "The Joshua Tree",
+      "capa": "albuns/capas/joshua_tree.jpg",
+      "data_lancamento": "1987-03-09",
+      "genero": "Rock",
+      "descricao": "The Joshua Tree é o quinto álbum de estúdio da banda irlandesa U2."
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 1,
+    "fields": {
+      "album": 1,
+      "titulo": "Brown Sugar",
+      "duracao": "00:03:49",
+      "spotify_link": "https://open.spotify.com/track/7M6HLdXFKuldsyeVLp7Q10",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 2,
+    "fields": {
+      "album": 1,
+      "titulo": "Wild Horses",
+      "duracao": "00:05:42",
+      "spotify_link": "https://open.spotify.com/track/7F8lgo5uHME4HnEztGqK56",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 3,
+    "fields": {
+      "album": 2,
+      "titulo": "Come Together",
+      "duracao": "00:04:20",
+      "spotify_link": "https://open.spotify.com/track/1vwkJd5KATCuYVmk5y7d0c",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 4,
+    "fields": {
+      "album": 2,
+      "titulo": "Something",
+      "duracao": "00:03:03",
+      "spotify_link": "https://open.spotify.com/track/3Rv8KGis5h7VqW8bBO8g5e",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 5,
+    "fields": {
+      "album": 3,
+      "titulo": "Stairway to Heaven",
+      "duracao": "00:08:02",
+      "spotify_link": "https://open.spotify.com/track/5CQ30WqJwcep0pYcV4AMNc",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 6,
+    "fields": {
+      "album": 3,
+      "titulo": "Black Dog",
+      "duracao": "00:04:55",
+      "spotify_link": "https://open.spotify.com/track/2SiXAy7TuUkycRVbbWDEpo",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 7,
+    "fields": {
+      "album": 4,
+      "titulo": "Time",
+      "duracao": "00:07:06",
+      "spotify_link": "https://open.spotify.com/track/3TO7bbrUKrOSPGRTB5MeCz",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 8,
+    "fields": {
+      "album": 4,
+      "titulo": "Money",
+      "duracao": "00:06:22",
+      "spotify_link": "https://open.spotify.com/track/0tZK5LUyi1EnSyB9r2Lk3m",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 9,
+    "fields": {
+      "album": 5,
+      "titulo": "Bohemian Rhapsody",
+      "duracao": "00:05:54",
+      "spotify_link": "https://open.spotify.com/track/3z8h0TU7ReDPLIbEnYhWZb",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 10,
+    "fields": {
+      "album": 5,
+      "titulo": "Love of My Life",
+      "duracao": "00:03:38",
+      "spotify_link": "https://open.spotify.com/track/4HxCsx0Qz5GgsxQbToVIMv",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 11,
+    "fields": {
+      "album": 6,
+      "titulo": "Smells Like Teen Spirit",
+      "duracao": "00:05:01",
+      "spotify_link": "https://open.spotify.com/track/5ghIJDpPoe3CfHMGu71E6T",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 12,
+    "fields": {
+      "album": 6,
+      "titulo": "Come As You Are",
+      "duracao": "00:03:39",
+      "spotify_link": "https://open.spotify.com/track/4P8eBj9H7bOqWs8XTzqAPU",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 13,
+    "fields": {
+      "album": 7,
+      "titulo": "Battery",
+      "duracao": "00:05:12",
+      "spotify_link": "https://open.spotify.com/track/1v4hqCO5jjJXewkxFz2VsT",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 14,
+    "fields": {
+      "album": 7,
+      "titulo": "Master of Puppets",
+      "duracao": "00:08:35",
+      "spotify_link": "https://open.spotify.com/track/1xbhOnlzGZ5NfBuXnEwJkl",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 15,
+    "fields": {
+      "album": 8,
+      "titulo": "Hells Bells",
+      "duracao": "00:05:12",
+      "spotify_link": "https://open.spotify.com/track/3NfxSdJnVdon1axzloJgba",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 16,
+    "fields": {
+      "album": 8,
+      "titulo": "Back in Black",
+      "duracao": "00:04:15",
+      "spotify_link": "https://open.spotify.com/track/57bgtoPSgt236HzfBOd8kj",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 17,
+    "fields": {
+      "album": 9,
+      "titulo": "Baba O'Riley",
+      "duracao": "00:05:00",
+      "spotify_link": "https://open.spotify.com/track/2nC3kTUm4yJ7sWEkoWxG7Z",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 18,
+    "fields": {
+      "album": 9,
+      "titulo": "Behind Blue Eyes",
+      "duracao": "00:03:41",
+      "spotify_link": "https://open.spotify.com/track/1I9qOa7DW4U3BN0cQxtHqK",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 19,
+    "fields": {
+      "album": 10,
+      "titulo": "With or Without You",
+      "duracao": "00:04:56",
+      "spotify_link": "https://open.spotify.com/track/0aw81z4BPkTH33UkbMmKzI",
+      "letra": ""
+    }
+  },
+  {
+    "model": "bandas.Musica",
+    "pk": 20,
+    "fields": {
+      "album": 10,
+      "titulo": "I Still Haven't Found What I'm Looking For",
+      "duracao": "00:04:37",
+      "spotify_link": "https://open.spotify.com/track/4ZTcGoTSRkO5n3Xiv3JHC5",
+      "letra": ""
+    }
+  }
+]

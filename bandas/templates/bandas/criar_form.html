@@ -1,0 +1,43 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if item_type == 'banda' %}
+            <div>
+                <label for="{{ form.nome.id_for_label }}">Nome:</label>
+                {{ form.nome }}
+                <span class="helptext">{{ form.nome.help_text }}</span>
+            </div>
+            <div>
+                <label for="{{ form.foto.id_for_label }}">Foto:</label>
+                {{ form.foto }}
+                <span class="helptext">{{ form.foto.help_text }}</span>
+            </div>
+            <div>
+                <label for="{{ form.descricao.id_for_label }}">Descrição:</label>
+                {{ form.descricao }}
+                <span class="helptext">{{ form.descricao.help_text }}</span>
+            </div>
+            <div>
+                <label for="{{ form.pais_origem.id_for_label }}">País de Origem:</label>
+                {{ form.pais_origem }}
+                <span class="helptext">{{ form.pais_origem.help_text }}</span>
+            </div>
+            <div>
+                <label for="{{ form.genero.id_for_label }}">Gênero:</label>
+                {{ form.genero }}
+                <span class="helptext">{{ form.genero.help_text }}</span>
+            </div>
+            <div>
+                <label for="{{ form.data_formacao.id_for_label }}">Data de Formação:</label>
+                {{ form.data_formacao }}
+                <span class="helptext">{{ form.data_formacao.help_text }}</span>
+            </div>
+        {% else %}
+            {{ form.as_p }}
+        {% endif %}
+        <input type="hidden" name="item_type" value="{{ item_type }}">
+        <button type="submit">Salvar</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'meteo/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="forecast-container">
+        {% for previsao in main_previsoes %}
+        <div class="forecast-card" onclick="toggleDetails('forecast-details-{{ previsao.id }}')">
+            <h3>{{ previsao.cidade.name }}</h3>
+            <p>Data: {{ previsao.data }}</p>
+            <p>Temp Min: {{ previsao.temp_min }}</p>
+            <p>Temp Max: {{ previsao.temp_max }}</p>
+            <img class="icon" src="{% static 'meteo/w_ic_d_' %}{% if previsao.wtid < 10 %}0{% endif %}{{ previsao.wtid }}anim.svg" alt="Weather Icon">
+            <div id="forecast-details-{{ previsao.id }}" class="forecast-details" style="display: none;">
+                <h4>Previsões para os próximos 5 dias</h4>
+                {% for detalhe in previsao.prevs.all %}
+                <div class="forecast-detail-card">
+                    <div class="forecast-detail-info">
+                        <h4>{{ detalhe.data }}</h4>
+                        <p>Temp Min: {{ detalhe.temp_min }}</p>
+                        <p>Temp Max: {{ detalhe.temp_max }}</p>
+                    </div>
+                    <img class="icon" src="{% static 'meteo/w_ic_d_' %}{% if detalhe.wtid < 10 %}0{% endif %}{{ detalhe.wtid }}anim.svg" alt="Weather Icon">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            details.style.display = (details.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+{% endblock %}

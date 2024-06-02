@@ -1,0 +1,12 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block content %}
+    <h3>{{disc.curricularUnitName}}<br><br></h3>
+
+    <p>{{disc.curricularYear}}º Ano -> {{disc.semester}} <br></p>
+    <h3>{{disc.ects}} ECTS<br></h3>
+
+    <p>{{disc.areaCientifica.nome}}<br></p>
+
+    <a href="{% url 'portfolio:editar_disciplina' disc.curricularIUnitReadableCode %}" class="button">Editar Disciplina</a>
+{% endblock %}

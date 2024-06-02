@@ -1,0 +1,21 @@
+{% extends 'autenticacao/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <h3>Log In</h3>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+    <a href="{% url 'autenticacao:registo' %}">Registar</a>
+    <a href="{% url 'autenticacao:reset_password' %}">Esqueci-me da minha conta</a>
+    <a href="{% url 'portfolio:home' %}">Cancelar</a>
+
+
+{% endblock %}

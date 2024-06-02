@@ -1,0 +1,20 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+<div class="album">
+    <h2>{{ album.titulo }}</h2>
+    <p>{{ album.descricao }}</p>
+    <p>Released on: {{ album.data_lancamento }}</p>
+    <img src="{{ album.capa.url }}" alt="Album Cover">
+    <a href="{% url 'bandas:editar_form' item_id=album.id item_type='album' %}">Editar Album</a>
+</div>
+
+<div class="musicas">
+    <h2>Músicas</h2>
+    <ul>
+        {% for musica in album.musicas.all %}
+            <li><a href="{% url 'bandas:musica' musica.id %}">{{ musica.titulo }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

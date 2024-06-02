@@ -1,0 +1,16 @@
+{% extends 'artigos/template.html' %}
+
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="item_type" value="{{ item_type }}">
+    {% if item_type == 'comment' %}
+        <input type="hidden" name="post_id" value="{{ comment.post.id }}">
+    {% endif %}
+
+    <button type="submit">Criar novo objeto</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header > p {
+    margin-left:20px;
+    font-size: 3vw;
+    color: black;
+      -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 0.02vw;
+      -webkit-text-stroke-color: black;
+
+}
+
+
+body > * {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+}
+
+body {
+      font-family: Arial, sans-serif;
+    }
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+.profile-photo {
+   width: 240px;
+   height: 240px;
+   border-radius: 50%;
+   overflow: hidden;
+   margin-bottom: 25px;
+}
+
+.profile-photo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+
+header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0); /* Initial transparent background */
+      transition: background-color 0.5s; /* Smooth transition effect */
+    }
+    header.scrolled {
+      background: #4a1a6a; /* Background color with transparency */
+    }
+
+
+nav {
+  display:flex;
+  justify-contents: flex-end;
+  margin-left:10px;
+  margin-right:20px;
+}
+
+
+nav a {
+
+  display:block;
+  padding: 0 1em;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white
+}
+
+nav > a{
+font-size: 1.5vw;
+color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 0.02vw;
+  -webkit-text-stroke-color: black;
+
+}
+
+
+main {
+  height: 100vh;
+  background-image: url("../portfolio/herobgd.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+main > p {
+  margin-top: 22vw;
+  font-size: 6vw;
+  color: black;
+  -webkit-text-fill-color: #e9d8f2; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.08vw;
+  -webkit-text-stroke-color: black;
+}
+
+
+
+article.primeiro {
+  min-height: 90vh;
+  background: #e9d8f2;
+  padding: 0 4vw;
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+
+article.segundo {
+  /* como tem menu e rodapé visíveis (10vh cada), define-se como altura 80vh. */
+  min-height: 80vh;
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_632/59303763700641.5ab98ff858d38.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  align-items: start;
+}
+
+footer {
+
+  height: 10vh;
+  background: #4a1a6a;
+  color: white;
+
+}
+
+footer > p{
+    font-size: 2vw;
+}

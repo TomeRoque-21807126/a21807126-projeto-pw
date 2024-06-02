@@ -1,0 +1,237 @@
+body {
+    background: url('/media/bandas/bg-bandas.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Reddit Mono", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#header-main {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#header-main .title {
+    font-size: 2.5em;
+    margin: 0;
+    color: #000;
+}
+
+#header-main .navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+#header-main .nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#header-main .nav-link:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.container .title {
+    font-size: 2em;
+    color: darkblue;
+}
+
+.banda-photo {
+    border-radius: 50%;
+    width: 200px;
+}
+
+.navbar {
+    text-decoration: none;
+    color: #333;
+}
+
+#header-main {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+#main-content {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.8); /* Adding a semi-transparent background for readability */
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+#main-nav {
+    text-decoration: none;
+    color: white;
+}
+
+a[href*="create"] {
+    font-weight: bold;
+    color: red;
+}
+
+img[alt="Banda Photo"] {
+    border: 2px solid #000;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.object-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.object-list li {
+    margin: 10px 0;
+}
+
+.object-link {
+    display: block;
+    padding: 15px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.2em;
+}
+
+.object-link:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.object-link::before {
+    content: '🎵';
+    margin-right: 10px;
+}
+
+.special-link {
+    color: #ff5722;
+    background-color: #000;
+    border: 2px solid #ff5722;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.special-link:hover {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+a:hover {
+    color: black;
+}
+
+li:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+.title::first-letter {
+    font-size: 1.5em;
+    color: red;
+}
+
+.banda-description::first-line {
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+img:first-of-type {
+    border-top: 5px solid red;
+    border-right: 5px solid blue;
+    border-bottom: 5px solid green;
+    border-left: 5px solid yellow;
+}
+
+img:nth-of-type(odd) {
+    border-top: 5px solid red;
+    border-right: 5px solid blue;
+    border-bottom: 5px solid green;
+    border-left: 5px solid yellow;
+}
+
+.helptext {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}

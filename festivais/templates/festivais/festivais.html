@@ -1,0 +1,19 @@
+{% extends 'festivais/layout.html' %}
+
+{% block content %}
+
+    {% for local in locals %}
+
+            {% if local.nome %}
+                <h3>{{local.nome}}</h3>
+                <ul>
+                    {% for fest in local.festivais.all %}
+                    <li> <a href="{% url 'festivais:festival' fest.nome %}">{{ fest.nome }} </a>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+
+
+{% endblock %}

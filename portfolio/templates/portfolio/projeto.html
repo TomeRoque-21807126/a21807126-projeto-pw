@@ -1,0 +1,19 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block content %}
+    <img href="{{proj.image}}">
+    <h3>{{proj.nome}}<br><br></h3>
+
+    <p>{{proj.descricao}}<br><br></p>
+    <p><h3>Conceitos: <br> </h3>{{proj.conceitos}}<br><br> </p>
+
+    <p><h3>Tecnologias: <br> </h3>{{proj.tecnologias}}<br><br> </p>
+
+    <p><h3>Link Video: <br> </h3>{{proj.linkVideo}}<br><br> </p>
+
+    <p><h3>Link Git: <br> </h3>{{proj.linkGit}}<br> </p>
+
+    <p>{{proj.areaCientifica.nome}}<br></p>
+
+    <a href="{% url 'portfolio:editar_projeto' proj.nome %}" class="button">Editar Projeto</a>
+{% endblock %}

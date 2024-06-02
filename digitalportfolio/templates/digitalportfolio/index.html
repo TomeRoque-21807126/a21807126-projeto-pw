@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomé Roque</title>
+
+  <link rel="stylesheet" href="{% static 'css/dpindex.css' %}">
+
+  <link rel="icon" type="image/x-icon" href="https://yt3.ggpht.com/ytc/AKedOLTtSIICccWIydxNZ3Cj3QQFukp2OukrFVzoXIdI=s600-c-k-c0x00ffffff-no-rj-rp-mo"/>
+
+</head>
+
+<body>
+  <header id="main-header">
+    <p>Tomé Roque</p>
+    <nav>
+        <a href="{% url 'digitalportfolio:home' %}">Home</a>
+        <a href="{% url 'digitalportfolio:aboutme' %}">About Me</a>
+        <a href="{% url 'portfolio:home' %}">Curso</a>
+        <a href="{% url 'bandas:home' %}">Bandas</a>
+        <a href="{% url 'artigos:home' %}">Artigos</a>
+        <a href="{% url 'meteo:index' %}">Metereologia</a>
+        {% if user.is_authenticated %}
+          <a href="{% url 'autenticacao:logout' %}">Log Out</a>
+        {% else %}
+                <a href="{% url 'autenticacao:login' %}">Log In</a>
+        {% endif %}
+    </nav>
+  </header>
+
+  <main>
+    <p>Welcome to my Digital Portfolio!</p>
+  </main>
+
+  <article class="primeiro">
+    <div class="container">
+      <div class="profile-photo">
+        <img src="{% static 'portfolio/profilePic.jpg' %}" alt="Profile Photo">
+      </div>
+      <div>
+        <p><b><i>Meet Tomé Roque.</i></b> Programmer & Editor <br><br></p>
+        <p>
+          Hi there! As you already know, my name is Tomé Roque. A small town boy who grew up to take a degree in computing engeneering
+          while also having a passion for photo and video editing, having been involved in projects on both matters. <br>
+          Living in a world where people should enjoy what they do, I also make some of my own work mainly for fun purposes.
+          Have a look around my website and discover them for yourselves!
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <article class='segundo'>
+  </article>
+
+  <footer>
+    <p>Tomé Roque ♠ Website developed in 2024</p>
+
+  </footer>
+</body>
+<script src="{% static 'code/dpindexcode.js' %}"></script>
+</html>

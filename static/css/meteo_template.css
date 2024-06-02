@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    background: url('https://cdnb.artstation.com/p/assets/images/images/023/743/143/original/valentin-hume-rainymoodresized.gif?1580214826') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0f7fa;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+
+header nav a.menu-link {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+header nav a.menu-link:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+}
+
+#content-container {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    color: #ffffff;
+}
+
+
+#content-container img {
+    margin-left: auto;
+    display: block;
+    max-width:200px;
+    height: auto;
+}
+
+.content-wrapper {
+    display: inline-flex;
+    align-items: center;
+}
+
+.content-wrapper div {
+    margin-right: 10px;
+}
+
+.content-wrapper img {
+    max-width: 50px;
+}
+
+#forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.forecast-card {
+    color:black;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    background-color: #f9f9f9;
+}
+.forecast-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.forecast-details {
+    color:black;
+    margin-top: 16px;
+    border-top: 1px solid #ddd;
+    padding-top: 16px;
+}
+.forecast-detail h3 {
+    color:black;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+.forecast-detail p {
+    color:black;
+    margin: 0;
+    padding: 0;
+}
+.forecast-detail-card {
+    color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.forecast-detail-card h4 {
+    color:black;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+.forecast-detail-info {
+    color:black;
+    display: flex;
+    flex-direction: column;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
